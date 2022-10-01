@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment_CSharp_Demo_API", "Assignment_CSharp_Demo\Assignment_CSharp_Demo_API.csproj", "{3542AD7D-A6CA-4E35-92E6-C8A8DBD1BE76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment_CSharp_Demo_API", "Assignment_CSharp_Demo\Assignment_CSharp_Demo_API.csproj", "{3542AD7D-A6CA-4E35-92E6-C8A8DBD1BE76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{686111BF-BEE7-43E4-87DC-4F687D7CC903}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{686111BF-BEE7-43E4-87DC-4F687D7CC903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppViews", "AppViews\AppViews.csproj", "{6DA399E9-63C7-4007-857E-FCDC197E9C7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{686111BF-BEE7-43E4-87DC-4F687D7CC903}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{686111BF-BEE7-43E4-87DC-4F687D7CC903}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{686111BF-BEE7-43E4-87DC-4F687D7CC903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DA399E9-63C7-4007-857E-FCDC197E9C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA399E9-63C7-4007-857E-FCDC197E9C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA399E9-63C7-4007-857E-FCDC197E9C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA399E9-63C7-4007-857E-FCDC197E9C7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
