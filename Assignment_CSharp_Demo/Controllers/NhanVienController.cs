@@ -8,47 +8,47 @@ namespace Assignment_CSharp_Demo_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SanphamController : ControllerBase
+    public class NhanvienController : ControllerBase
     {
-        private readonly IRepositories<Sanpham> _SanphamRepositories;
-        public SanphamController()
+        private readonly IRepositories<Nhanvien> _NhanvienRepositories;
+        public NhanvienController()
         {
-            _SanphamRepositories = new AllRepositories<Sanpham>();
+            _NhanvienRepositories = new AllRepositories<Nhanvien>();
         }
         // GET: api/<ChucvuController>
         [HttpGet]
-        public Task<IEnumerable<Sanpham>> Get()
+        public Task<IEnumerable<Nhanvien>> Get()
         {
-            return _SanphamRepositories.GetAllAsync();
+            return _NhanvienRepositories.GetAllAsync();
         }
 
         // GET api/<ChucvuController>/5
         [HttpGet("{id}")]
-        public Task<Sanpham> Get(Guid id)
+        public Task<Nhanvien> Get(Guid id)
         {
-            return _SanphamRepositories.GetAsync(id);
+            return _NhanvienRepositories.GetAsync(id);
         }
 
         // POST api/<ChucvuController>
         [HttpPost]
-        public void Post([FromBody] Sanpham sanpham)
+        public void Post([FromBody] Nhanvien nhanvien)
         {
-            _SanphamRepositories.AddOneAsyn(sanpham);
+            _NhanvienRepositories.AddOneAsyn(nhanvien);
         }
 
         // PUT api/<ChucvuController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Sanpham sanpham)
+        public void Put(int id, [FromBody] Nhanvien nhanvien)
         {
-            _SanphamRepositories.UpdateOneAsyn(sanpham);
+            _NhanvienRepositories.UpdateOneAsyn(nhanvien);
         }
 
         // DELETE api/<ChucvuController>/5
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
-            var x = _SanphamRepositories.GetAsync(id).Result;
-            _SanphamRepositories.DeleteOneAsyn(x);
+            var x = _NhanvienRepositories.GetAsync(id).Result;
+            _NhanvienRepositories.DeleteOneAsyn(x);
         }
     }
 }

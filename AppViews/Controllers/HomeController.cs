@@ -19,7 +19,7 @@ namespace AppViews.Controllers
         {
             List<Sanpham> sanphams = new List<Sanpham>();
             var httpClient = new HttpClient(); //tạo 1 http Client để call API
-            var response = await httpClient.GetAsync("https://localhost:7010/api/Sanphams/-get-all-sanpham");
+            var response = await httpClient.GetAsync("https://localhost:7102/api/Sanphams/-get-all-sanpham");
             // Lấy dữ liệu từ file Json - Cài nuget Newtonsoft.json
             // Đọc ra 1 file Json
             string sanphamResponse = await response.Content.ReadAsStringAsync();

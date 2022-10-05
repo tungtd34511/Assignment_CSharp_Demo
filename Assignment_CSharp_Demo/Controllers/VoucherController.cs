@@ -8,47 +8,47 @@ namespace Assignment_CSharp_Demo_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SanphamController : ControllerBase
+    public class VoucherController : ControllerBase
     {
-        private readonly IRepositories<Sanpham> _SanphamRepositories;
-        public SanphamController()
+        private readonly IRepositories<Voucher> _VoucherRepositories;
+        public VoucherController()
         {
-            _SanphamRepositories = new AllRepositories<Sanpham>();
+            _VoucherRepositories = new AllRepositories<Voucher>();
         }
         // GET: api/<ChucvuController>
         [HttpGet]
-        public Task<IEnumerable<Sanpham>> Get()
+        public Task<IEnumerable<Voucher>> Get()
         {
-            return _SanphamRepositories.GetAllAsync();
+            return _VoucherRepositories.GetAllAsync();
         }
 
         // GET api/<ChucvuController>/5
         [HttpGet("{id}")]
-        public Task<Sanpham> Get(Guid id)
+        public Task<Voucher> Get(Guid id)
         {
-            return _SanphamRepositories.GetAsync(id);
+            return _VoucherRepositories.GetAsync(id);
         }
 
         // POST api/<ChucvuController>
         [HttpPost]
-        public void Post([FromBody] Sanpham sanpham)
+        public void Post([FromBody] Voucher voucher)
         {
-            _SanphamRepositories.AddOneAsyn(sanpham);
+            _VoucherRepositories.AddOneAsyn(voucher);
         }
 
         // PUT api/<ChucvuController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Sanpham sanpham)
+        public void Put(int id, [FromBody] Voucher voucher)
         {
-            _SanphamRepositories.UpdateOneAsyn(sanpham);
+            _VoucherRepositories.UpdateOneAsyn(voucher);
         }
 
         // DELETE api/<ChucvuController>/5
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
-            var x = _SanphamRepositories.GetAsync(id).Result;
-            _SanphamRepositories.DeleteOneAsyn(x);
+            var x = _VoucherRepositories.GetAsync(id).Result;
+            _VoucherRepositories.DeleteOneAsyn(x);
         }
     }
 }

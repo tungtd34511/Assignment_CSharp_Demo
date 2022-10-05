@@ -19,7 +19,9 @@ namespace Data.Repositories.Implementations
         DbSet<TEntity> IRepositories<TEntity>.Entities { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public AllRepositories()
         {
-
+            _dbContext = new CuahangDbContext();
+            /// thứ quan trọng
+            Entities = _dbContext.Set<TEntity>();// lấy dữ liệu DBset bất kì
         }
         public async Task<TEntity> AddOneAsyn(TEntity entity)
         {

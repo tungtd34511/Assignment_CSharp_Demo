@@ -23,7 +23,7 @@ namespace Data.Configurations
             builder.HasOne<Giohang>(e => e.Giohang)
                 .WithMany(c => c.Giohangchitiets)
                 .HasForeignKey(c => c.IDGiohang)
-                .HasConstraintName("FK_Giohang")
+                .HasConstraintName("FK_Giohang2")
                 .OnDelete(DeleteBehavior.Cascade);
             builder.HasOne<Sanpham>(e => e.Sanpham)
                 .WithMany(c => c.Giohangchitiets)

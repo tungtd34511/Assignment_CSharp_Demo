@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Data.ModelsClass
 {
-    internal class Chucvu
+    public class Chucvu
     {
+        public Guid Id { get; set; }
+        public string Ma { get; set; }
+        public string Ten { get; set; }
+        public IEnumerable<Chitietchucvu> chitietchucvus { get; set; }
     }
 }

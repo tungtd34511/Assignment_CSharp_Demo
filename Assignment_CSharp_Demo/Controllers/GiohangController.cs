@@ -8,47 +8,47 @@ namespace Assignment_CSharp_Demo_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SanphamController : ControllerBase
+    public class GiohangController : ControllerBase
     {
-        private readonly IRepositories<Sanpham> _SanphamRepositories;
-        public SanphamController()
+        private readonly IRepositories<Giohang> _GiohangRepositories;
+        public GiohangController()
         {
-            _SanphamRepositories = new AllRepositories<Sanpham>();
+            _GiohangRepositories = new AllRepositories<Giohang>();
         }
         // GET: api/<ChucvuController>
         [HttpGet]
-        public Task<IEnumerable<Sanpham>> Get()
+        public Task<IEnumerable<Giohang>> Get()
         {
-            return _SanphamRepositories.GetAllAsync();
+            return _GiohangRepositories.GetAllAsync();
         }
 
         // GET api/<ChucvuController>/5
         [HttpGet("{id}")]
-        public Task<Sanpham> Get(Guid id)
+        public Task<Giohang> Get(Guid id)
         {
-            return _SanphamRepositories.GetAsync(id);
+            return _GiohangRepositories.GetAsync(id);
         }
 
         // POST api/<ChucvuController>
         [HttpPost]
-        public void Post([FromBody] Sanpham sanpham)
+        public void Post([FromBody] Giohang giohang)
         {
-            _SanphamRepositories.AddOneAsyn(sanpham);
+            _GiohangRepositories.AddOneAsyn(giohang);
         }
 
         // PUT api/<ChucvuController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Sanpham sanpham)
+        public void Put(int id, [FromBody]Giohang giohang)
         {
-            _SanphamRepositories.UpdateOneAsyn(sanpham);
+            _GiohangRepositories.UpdateOneAsyn(giohang);
         }
 
         // DELETE api/<ChucvuController>/5
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
-            var x = _SanphamRepositories.GetAsync(id).Result;
-            _SanphamRepositories.DeleteOneAsyn(x);
+            var x = _GiohangRepositories.GetAsync(id).Result;
+            _GiohangRepositories.DeleteOneAsyn(x);
         }
     }
 }

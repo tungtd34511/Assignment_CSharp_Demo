@@ -12,5 +12,6 @@ namespace Data.ModelsClass
         public Guid IDKhach { get; set; }
         public bool TrangThai { get; set; }
         public IEnumerable<Giohangchitiet> Giohangchitiets { get; set; }
+        public Hoadon Hoadon { get; set; }
     }
 }
